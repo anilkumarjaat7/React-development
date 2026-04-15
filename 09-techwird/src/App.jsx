@@ -1,16 +1,13 @@
-import "./App.css";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
-import CourseCategories from "./components/CourseCategories";
 
 function App() {
   return (
     <div>
       <Navbar />
       <Hero />
-      <CourseCategories />
-      <h1>Hello</h1>
-      <p>hello i am </p>
+      <h1 className="text-3xl font-bold underline">Hello word</h1>
+      <p>loren hello</p>
     </div>
   );
 }

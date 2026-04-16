@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 function Navbar() {
   return (
     <nav className="bg-gray-900 text-white px-6 py-4 shadow-md">
@@ -8,16 +10,16 @@ function Navbar() {
         {/* menu */}
         <ul className="flex space-x-20 text-lg">
           <li className="text-blue-200  hover:text-yellow-400 cursor-pointer">
-            <a>Home</a>
+            <Link to="/">Home</Link>
           </li>
           <li className=" hover:text-yellow-400 cursor-pointer">
-            <a>Course</a>
+            <Link to="courses">Course</Link>
           </li>
           <li className="hover:text-yellow-400 cursor-pointer">
-            <a>About</a>
+            <Link to="about">About</Link>
           </li>
           <li className="hover:text-yellow-400 cursor-pointer">
-            <a>Contact</a>
+            <Link to="contact">Contact</Link>
           </li>
         </ul>
       </div>

@@ -1,5 +1,5 @@
 // import { useState } from "react";
-import Form from "./component/Form";
+import FormOne from "./component/FormOne";
 
 function App() {
   // let count = 0;
@@ -10,7 +10,8 @@ function App() {
   return (
     <div>
       <h1>Hello word</h1>
-      <Form />
+      <FormOne />
+      {/* <Form /> */}
 
       {/* <p>{count}</p> */}
       {/* <button

@@ -1,0 +1,13 @@
+Hooks
+
+1. UseState()
+
+2. useEffect(fun, [])  dom changes api data 
+
+3. useContext 
+
+4.useRef
+
+5. useMemo
+
+6. useCallback

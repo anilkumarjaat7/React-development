@@ -4,8 +4,15 @@ Hooks
 
 2. useEffect(fun, [])  dom changes api data 
 
-3. useContext 
+3. useContext  App -> parent -> chid -> grandchild
 
+// login user data shopping card Auth   
+
+
+const MyContext = createContext();
+
+<MyContext.provider value{data}  >
+ 
 4.useRef
 
 5. useMemo

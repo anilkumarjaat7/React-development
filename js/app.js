@@ -21,16 +21,18 @@
 // msg(info[1]);
 // msg(info[2]);
 
-let length = 8;
+// let length = 8;
 
-let str = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+// let str = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
-let newKey = "";
-for (let i = 0; i < length; i++) {
-  let randomindex = Math.floor(Math.random() * str.length);
-  newKey += str[randomindex];
-}
+// let newKey = "";
+// for (let i = 0; i < length; i++) {
+//   let randomindex = Math.floor(Math.random() * str.length);
+//   newKey += str[randomindex];
+// }
 
-console.log(newKey);
+// console.log(newKey);
 
 // console.log(Math.floor(Math.random() * 10));
+
+// console.log(Date.now());

@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isDropdownOpen, setIsDropDwonOpen] = useState(false);
 
   return (
     <>
@@ -30,14 +31,35 @@ function Navbar() {
               <li className="hover:text-amber-300 cursor-pointer transition duration-300 text-xl">
                 <Link to="/contact"> Contact</Link>
               </li>
-              <li className="hover:text-amber-300 cursor-pointer transition duration-300 text-xl">
-                <Link to="/placement">Placements</Link>
+              {/* more DropDown */}
+              <li className="relative">
+                <button
+                  className="flex items-center gep-1 hover:text-amber-300 text-xl"
+                  onClick={() => setIsDropDwonOpen(!isDropdownOpen)}
+                >
+                  More
+                </button>
+
+                {isDropdownOpen && (
+                  <div className="absolute top-full mt-5 w-48 bg-white  text-black rounded-lg ">
+                    <Link
+                      to="/placement"
+                      className="block px-4 py-3 hover:bg-gray-400"
+                    >
+                      Placements
+                    </Link>
+                  </div>
+                )}
               </li>
             </ul>
 
             {/* Button */}
             <button className="bg-yellow-400 text-black px-5 py-3 rounded-xl font-semibold hover:bg-yellow-500 transition duration-200">
               Get Admission
+            </button>
+
+            <button className="bg-yellow-400 text-black px-5 py-3 rounded-xl font-semibold hover:bg-yellow-500 transition duration-200">
+              <Link to="/login">Login</Link>
             </button>
           </div>
 
@@ -51,28 +73,68 @@ function Navbar() {
 
         {/* Mobile Menu */}
         {isOpen && (
-          <div className="md:hidden bg-gray-700 px-6 pb-5">
-            <ul className="flex flex-col gap-5 font-medium pt-4">
-              <li className="hover:text-amber-300 cursor-pointer transition duration-300 text-lg">
-                <Link to="/"> Home </Link>
+          <div className="md:hidden bg-gray-700 px-6 py-5">
+            <ul className="flex flex-col gap-4 font-medium">
+              <li>
+                <Link
+                  to="/"
+                  onClick={() => setIsOpen(false)}
+                  className="block hover:text-amber-300"
+                >
+                  Home
+                </Link>
               </li>
-              <li className="hover:text-amber-300 cursor-pointer transition duration-300 text-lg">
-                <Link to="/course">Courses</Link>
+
+              <li>
+                <Link
+                  to="/course"
+                  onClick={() => setIsOpen(false)}
+                  className="block hover:text-amber-300"
+                >
+                  Courses
+                </Link>
               </li>
-              <li className="hover:text-amber-300 cursor-pointer transition duration-300 text-lg">
-                <Link to="/about">About</Link>
+
+              <li>
+                <Link
+                  to="/about"
+                  onClick={() => setIsOpen(false)}
+                  className="block hover:text-amber-300"
+                >
+                  About
+                </Link>
               </li>
-              <li className="hover:text-amber-300 cursor-pointer transition duration-300 text-lg">
-                <Link to="/contact"> Contact</Link>
+
+              <li>
+                <Link
+                  to="/contact"
+                  onClick={() => setIsOpen(false)}
+                  className="block hover:text-amber-300"
+                >
+                  Contact
+                </Link>
               </li>
-              <li className="hover:text-amber-300 cursor-pointer transition duration-300 text-lg">
-                <Link to="/placement">Placements</Link>
+
+              <li>
+                <Link
+                  to="/placement"
+                  onClick={() => setIsOpen(false)}
+                  className="block hover:text-amber-300"
+                >
+                  Placements
+                </Link>
               </li>
             </ul>
 
-            <button className="bg-yellow-400 text-black px-5 py-3 rounded-xl font-semibold hover:bg-yellow-500 transition duration-200 mt-5 w-full">
-              Get Admission
-            </button>
+            <div className="flex flex-col gap-3 mt-6">
+              <button className="w-full bg-yellow-400 text-black py-3 rounded-xl font-semibold">
+                Get Admission
+              </button>
+
+              <button className="w-full bg-white text-black py-3 rounded-xl font-semibold">
+                <Link to="/login">Login</Link>
+              </button>
+            </div>
           </div>
         )}
       </nav>
